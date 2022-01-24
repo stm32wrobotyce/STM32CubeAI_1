@@ -1,0 +1,207 @@
+{
+    "_allocate_inputs": 0,
+    "_allocate_outputs": 0,
+    "cli_parameters": "generate --name sharp_gesture -m C:/Users/piotr/Desktop/data_AI_1.h5 --type keras --compression 1 --verbosity 1 --workspace C:\\Users\\piotr\\AppData\\Local\\Temp\\mxAI_workspace197339491565890011403075572737589819 --output C:\\Users\\piotr\\.stm32cubemx",
+    "cli_version": {
+        "major": 1,
+        "micro": 1,
+        "minor": 5
+    },
+    "cli_version_str": "1.5.1",
+    "compression": {
+        "factor": null,
+        "layers": {}
+    },
+    "date_time": "Sun Jan  9 16:01:46 2022",
+    "error": 0,
+    "error_str": [],
+    "exec_cmd": "generate",
+    "exec_duration": 0.0,
+    "hash": "d929baf82c7d2937058a86e7e3ca4878",
+    "inputs": [
+        "input_0"
+    ],
+    "layers": [
+        {
+            "extras": {
+                "n_macc": 0,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 256,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        1,
+                        1,
+                        64,
+                        1
+                    ]
+                },
+                "rom_size": 0
+            },
+            "id": 0,
+            "inputs": [],
+            "name": "input_0",
+            "type": "Input"
+        },
+        {
+            "extras": {
+                "n_macc": 2080,
+                "n_params": 2080,
+                "psize": 8320,
+                "rom_output": {
+                    "c_size": 128,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        1,
+                        1,
+                        32,
+                        1
+                    ]
+                },
+                "rom_size": 8320
+            },
+            "id": 0,
+            "inputs": [
+                "input_0"
+            ],
+            "name": "dense_18",
+            "type": "Dense"
+        },
+        {
+            "extras": {
+                "n_macc": 32,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 128,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        1,
+                        1,
+                        32,
+                        1
+                    ]
+                },
+                "rom_size": 0
+            },
+            "id": 0,
+            "inputs": [
+                "dense_18"
+            ],
+            "name": "dense_18_nl",
+            "type": "Nonlinearity"
+        },
+        {
+            "extras": {
+                "n_macc": 66,
+                "n_params": 66,
+                "psize": 264,
+                "rom_output": {
+                    "c_size": 8,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        1,
+                        1,
+                        2,
+                        1
+                    ]
+                },
+                "rom_size": 264
+            },
+            "id": 1,
+            "inputs": [
+                "dense_18_nl"
+            ],
+            "name": "dense_19",
+            "type": "Dense"
+        },
+        {
+            "extras": {
+                "n_macc": 30,
+                "n_params": 0,
+                "psize": 0,
+                "rom_output": {
+                    "c_size": 8,
+                    "fmt": {
+                        "format": "float"
+                    },
+                    "shape": [
+                        1,
+                        1,
+                        2,
+                        1
+                    ]
+                },
+                "rom_size": 0
+            },
+            "id": 1,
+            "inputs": [
+                "dense_19"
+            ],
+            "name": "dense_19_nl",
+            "type": "Nonlinearity"
+        }
+    ],
+    "model_files": [
+        "C:\\Users\\piotr\\Desktop\\data_AI_1.h5"
+    ],
+    "model_n_params": 2146,
+    "model_name": "data_AI_1",
+    "model_size": 8584,
+    "model_type": "keras",
+    "name": "sharp_gesture",
+    "outputs": [
+        "dense_19_nl"
+    ],
+    "ram_io_size": [
+        256,
+        8
+    ],
+    "ram_size": [
+        136,
+        136
+    ],
+    "report_version": 1.1,
+    "rom_cfact": 1.0,
+    "rom_heap_inspector": 2048,
+    "rom_inputs": [
+        {
+            "c_size": 256,
+            "c_type": "float",
+            "name": "input_0"
+        }
+    ],
+    "rom_n_macc": 2208,
+    "rom_outputs": [
+        {
+            "c_size": 8,
+            "c_type": "float",
+            "name": "dense_19_nl"
+        }
+    ],
+    "rom_size": 8584,
+    "strategy": "heap_overlay",
+    "tools_api_version": {
+        "major": 1,
+        "micro": 1,
+        "minor": 5
+    },
+    "tools_version": {
+        "extra": "RC8",
+        "major": 7,
+        "micro": 0,
+        "minor": 0
+    },
+    "val_error": -1.0,
+    "val_error_desc": "None (None) #-1",
+    "val_metrics": []
+}
